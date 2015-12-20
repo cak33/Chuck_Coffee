@@ -14,13 +14,45 @@
 <style>    
 	nav ul li a{
 	  color: white;
-	}    
+	}
+
+	nav ul li a{
+	  color: white;
+	}
+
+	/* label color */
+   .input-field label {
+     color: #1e88e5;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #1e88e5;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #1e88e5;
+     box-shadow: 0 1px 0 0 #1e88e5;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1e88e5;
+   }    
 </style>
 
 </head>
 
-<body class ="blue-grey lighten-5 z-depth-3">
-    <nav class="blue darken-1" role="navigation">
+<body class ="blue-grey lighten-5">
+    <nav class="blue darken-1 z-depth-3" role="navigation">
       <div class="nav-wrapper container white-text">
       <a id="logo-container" href="index.html" class="brand-logo"><img src="Logo2.png" height="60" padding="10" alt=""/><a>
         <ul class="right hide-on-med-and-down">        
@@ -47,7 +79,7 @@
 <div class="row">
 	<div class="col s4 offset-s4">
         <div class="input-field col s4">
-          <input placeholder="Email" id="first_name" type="email" class="validate">
+          <input placeholder="Email" id="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
         <div class="input-field col s4">
