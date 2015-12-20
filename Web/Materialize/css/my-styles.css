@@ -1,0 +1,60 @@
+#calvin-logo {
+	display:block;
+	margin:auto;
+	height:100px;
+}
+
+#searchForm {
+	display:block;
+	text-align:center;
+	margin:10%;
+}
+
+#searchForm div input {
+	width:70%;
+	height:2em;
+	text-align:left;
+	font-size:1em;
+	color:#aaaaaa;
+	margin:3px;
+}
+
+#searchForm button {
+	margin:8px;
+}
+
+#Ubooks-Logo {
+	width:20%;
+	text-align:left;
+	margin:8px;
+}
+
+#drop-list {
+	color:white;
+}
+
+#profileTag{
+	text-align:left;
+}
+
+#above_search{
+	text-align:center;
+	bottom:0;
+}
+
+#login_bar{
+	height:30px;
+	margin:auto;
+}
+
+#about_page{
+	align:middle;
+}
+
+.navbar .brand { 
+    max-height: 40px;
+    max-width: 30%; 
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0; 
+}
