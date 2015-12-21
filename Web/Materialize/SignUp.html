@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Ubrew IoT</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/my-styles.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+<style>    
+	nav ul li a{
+	  color: white;
+	}
+
+	nav ul li a{
+	  color: white;
+	}
+</style>
+
+</head>
+
+<body class ="blue-grey lighten-5">
+<!--================================= NAVBAR ================================================================================================-->
+	<nav class="blue darken-1" role="navigation">
+		<div class="nav-wrapper container white-text">
+		<a id="logo-container" href="index.html" class="brand-logo"><img src="Logo2.png" height="60" padding="10" alt=""/><a>
+		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">        
+				<li><a href="index.html"><b>Home</b></a></li>
+				<li><a href=""><b>Profile</b></a></li>
+				<li><a href=""><b>UBrew</b></a></li>
+			</ul>
+			<ul id="nav-mobile" class="side-nav blue darken-1">
+				<li><a href="index.html" class="white-text"><b>Home</b></a></li>
+				<li><a href="" class="white-text"><b>Profile</b></a></li>
+				<li><a href="" class="white-text"><b>Ubrew</b></a></li>
+			</ul>
+		</div>
+	</nav>
+<!--================================= BODY OF FORM ============================================================================================-->
+	<div class="container">
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12 m6">
+						<input placeholder="First Name" id="first_name" type="text" class="validate">
+						<label for="first_name">First Name</label>
+					</div>
+					<div class="input-field col s12 m6">
+						<input placeholder="Last Name" id="last_name" type="text" class="validate">
+						<label for="last_name">Last Name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input disabled value="I am not editable" id="disabled" type="text" class="validate">
+						<label for="disabled">Disabled</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" type="password" class="validate">
+						<label for="password">Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="email" type="email" class="validate">
+						<label for="email">Email</label>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+<!--================================= FOOTER SECTION ==========================================================================================-->
+	<footer class="page-footer blue darken-1">
+	  <div class="container white-text">
+	    <div class="row">
+	    	<div class="col s3 offset-s12">
+	    		<h5><b>Contact<b></h5>
+	    		<ul>
+	    			<li><a href="https://www.linkedin.com/in/charles-kingston-bb981160" class="white-text left">Charles Kingston</a></li>
+	    			<li><a href="https://www.linkedin.com/pub/jake-pruiksma/75/b41/5b4" class="white-text left">Jacob Pruiksma</a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	  </div>
+	  <div class="footer-copyright">
+	    <div class="container center">
+	    Charles Kingston | Jacob Pruiksma © 12/21/2015
+	    </div>
+	  </div>
+	</footer>
+<!--================================= SCRIPTS ===============================================================================================-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+</body>
+
+</html>
