@@ -1,0 +1,143 @@
+#calvin-logo {
+	display:block;
+	margin:auto;
+	height:100px;
+}
+
+#searchForm {
+	display:block;
+	text-align:center;
+	margin:10%;
+}
+
+#searchForm div input {
+	width:70%;
+	height:2em;
+	text-align:left;
+	font-size:1em;
+	color:#aaaaaa;
+	margin:3px;
+}
+
+#searchForm button {
+	margin:8px;
+}
+
+#Ubooks-Logo {
+	width:20%;
+	text-align:left;
+	margin:8px;
+}
+
+#drop-list {
+	color:white;
+}
+
+#profileTag{
+	text-align:left;
+}
+
+#above_search{
+	text-align:center;
+	bottom:0;
+}
+
+#login_bar{
+	height:30px;
+	margin:auto;
+}
+
+#about_page{
+	align:middle;
+}
+
+.navbar .brand { 
+    max-height: 40px;
+    max-width: 30%; 
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0; 
+}
+
+	/* label color */
+   .input-field label {
+     color: #1e88e5;
+   }
+   /* label focus color */
+   .input-field input[type=email]:focus + label {
+     color: #1e88e5;
+   }
+   /* label underline focus color */
+   .input-field input[type=email]:focus {
+     border-bottom: 1px solid #1e88e5;
+     box-shadow: 0 1px 0 0 #1e88e5;
+   }
+   /* valid color */
+   .input-field input[type=email].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=email].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1e88e5;
+   }    
+
+   	/* label color */
+   .input-field label {
+     color: #1e88e5;
+   }
+   /* label focus color */
+   .input-field input[type=password]:focus + label {
+     color: #1e88e5;
+   }
+   /* label underline focus color */
+   .input-field input[type=password]:focus {
+     border-bottom: 1px solid #1e88e5;
+     box-shadow: 0 1px 0 0 #1e88e5;
+   }
+   /* valid color */
+   .input-field input[type=password].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=password].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1e88e5;
+   }   
+   	/* label color */
+   .input-field label {
+     color: #1e88e5;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #1e88e5;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #1e88e5;
+     box-shadow: 0 1px 0 0 #1e88e5;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #1e88e5;
+   }   
