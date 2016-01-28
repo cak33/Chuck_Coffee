@@ -42,7 +42,7 @@
 <!--================================= THIS IS THE THREE ICON AND VALUE PROPOSITION SECTION ===================================================-->
 	<div class="row">
 		<div class="col s12">
-			<h1 class="center blue-text text-darken-4">JavaBot simplifies your brewing process.</h1>
+			<h4 class="center blue-text text-darken-4 pad-top-40">JavaBot simplifies your brewing process.</h4>
 		</div>
 	</div>
 	<div class="row container">
@@ -100,7 +100,8 @@
 		</div>
 		<div class="col s12 m4 offset-m4 l2 center-align">
 			<div class="input-field">
-				<button class="btn waves-effect waves-light blue darken-4 ubrew-buttons" type="submit" name="action" id="mail-button">Sign Up
+				<button class="btn waves-effect waves-light blue darken-4 custom-buttons" type="submit" name="action" id="mail-button" onclick="pressSignUpButton()">
+					Sign Up
 	    			<i class="material-icons right">send</i>
 	  			</button>
 	       	</div>
@@ -120,18 +121,18 @@
 		</div>
 		<div class="parallax"><img src="smartphones.jpg" id="smartphone-img" alt="Three smartphones in a row on a table"></div>
 	</div>
-<!--================================= ABOUT UBREW  ==========================================================================================-->
+<!--================================= ABOUT JavaBot  ==========================================================================================-->
 	<div class="container">
 		<div class="row">
 			<h2 class="center blue-text text-darken-4"><b>About JavaBot</b></h2>
 		</div>
 		<div class="row flow-text">
 			<p>
-				JavaBot is the first "one-stop-shop" for the modern day coffee drinker.  Feel like pressing the alarm for 5 extra minutes? No problem.  Start brewing the desired quantity of coffee from your smart phone.  Better yet, forget to set up the timer for your brew schedule? No problem.  Set a schedule depending on what you have going on right from your smart phone.  Make a pot of coffee and forget that you have no more coffee left?  No problem.  U Brew sends you push notifications based upon sensor readings from the JavaBot machine, so you may place an order for a fresh bag to be delivered so you will never run out. JavaBot fosters both the supply and brewing processes, all while maintaining top quality and freshness through our unique coffee storage unit within the JavaBot machine.
+				JavaBot is the first "one-stop-shop" for the modern day coffee drinker.  Feel like pressing the alarm for 5 extra minutes? No problem.  Start brewing the desired quantity of coffee from your smart phone.  Better yet, forget to set up the timer for your brew schedule? No problem.  Set a schedule depending on what you have going on right from your smart phone.  Make a pot of coffee and forget that you have no more coffee left?  No problem.  JavaBot sends you push notifications based upon sensor readings from the JavaBot machine, so you may place an order for a fresh bag to be delivered so you will never run out. JavaBot fosters both the supply and brewing processes, all while maintaining top quality and freshness through our unique coffee storage unit within the JavaBot machine.
 			</p>
 		</div>
 	</div>
-	<!--================================= UBREW MISSION ==========================================================================================-->
+	<!--================================= JavaBot MISSION ==========================================================================================-->
 	<div class="container">
 		<div class="row">
 			<h2 class="center blue-text text-darken-4"><b>The JavaBot Mission</b></h2>
@@ -203,8 +204,9 @@
 					</div>
 					<div class="col s12 l8 offset-l1">
 						<h5 class="blue-text text-darken-4"><b>Mike Swierenga, Computer Science</b></h5>
-						<p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum 
-						</p>
+						<p>
+							Mike
+ 						</p>
 					</div>
 				</div>
 			</li>
@@ -217,14 +219,14 @@
 	    	<div class="col s4 offset-s1 offset-m8">
 	    		<div class="row" padding-top="0px">
 	    			<h5><b>Contact<b></h5>
-	    			<a href="mailto:ubrewiot@gmail.com" class="white-text left" target="_blank">ubrewiot@gmail.com</a>
+	    			<a href="mailto:javabot.info@gmail.com" class="white-text left" target="_blank">javabot.info@gmail.com</a>
 	    		</div>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="footer-copyright">
 	    <div class="container center">
-	    U<em>Brew</em> © 2016
+	    <em>JavaBot</em> © 2016
 	    </div>
 	  </div>
 	</footer>
@@ -238,7 +240,7 @@
 		const SUCCESS = true;
 		const FAILURE = false;
 
-		Parse.initialize("1t2NeyGnFZzVwc1zItE2HygqOSGCa9kABk6og0uj", "bNeUkI2x8Mqr7quLnk4Vdaq4CX3lkscd3ciH4Uy6");
+		Parse.initialize("IWppXNtUPbDAM9mNgrZp8ST2BvPqnD4zkTqVm9rN", "qVi2WakfzZ1bRmkY2rhYp2ePh3YwUyEJaBnsF7kg");
 
 		var options = [
 			{selector: '#sf1', offset: 400, callback: 'Materialize.showStaggeredList("#sf1")'}
@@ -248,7 +250,7 @@
 
 
 
-		$("#mail-button").click(function() {
+		function pressSignUpButton() {
 
 			var email = $("#email-value").val();
 
@@ -280,7 +282,7 @@
 
 				}
 			});
-		});
+		}
 
 
 		function saveNewEmail(email) {
@@ -321,7 +323,15 @@
 			$("#signup-received").text(msg);
 		}
 
+		$(document).ready(function() {
+    		$('#email-value').keydown(function(event) {
+        		if (event.keyCode == 13) {
+        			pressSignUpButton();
 
+            		return false;
+         		}
+    		});
+		});
 
 	</script>
 </body>

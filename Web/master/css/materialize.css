@@ -1,6 +1,6 @@
 /* custom styles */
 
-.ubrew-buttons {
+.custom-buttons {
   min-width:155px;
 }
 
@@ -13,6 +13,9 @@
   width:auto;
 }
 
+.pad-top-40 {
+  padding-top: 40px;
+}
 
 
 /*!
