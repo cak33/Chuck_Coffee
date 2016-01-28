@@ -95,15 +95,21 @@
 	<div class="row">
 		<div class="col s12 m4 l2 offset-m4 offset-l4">
 			<div class="input-field">
-				<input placeholder="Email" id="email" type="email" class="validate">
+				<input placeholder="Email" id="email-value" type="email" class="validate">
 	       	</div>
 		</div>
 		<div class="col s12 m4 offset-m4 l2 center-align">
 			<div class="input-field">
-				<button class="btn waves-effect waves-light blue darken-4 ubrew-buttons" type="submit" name="action">Sign Up
+				<button class="btn waves-effect waves-light blue darken-4 ubrew-buttons" type="submit" name="action" id="mail-button">Sign Up
 	    			<i class="material-icons right">send</i>
 	  			</button>
 	       	</div>
+		</div>
+		<div class="row">
+			<div class="col s12 m4 offset-m4 center-align">
+				<p id="signup-received">
+				</p>
+			</div>
 		</div>
 	</div>
 <!--================================= Parrallax Image Section ===============================================================================-->
@@ -225,11 +231,96 @@
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/init.js"></script>
+	<script src="https://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
 	<script type="text/javascript">
+
+		const SUCCESS = true;
+		const FAILURE = false;
+
+		Parse.initialize("1t2NeyGnFZzVwc1zItE2HygqOSGCa9kABk6og0uj", "bNeUkI2x8Mqr7quLnk4Vdaq4CX3lkscd3ciH4Uy6");
+
 		var options = [
 			{selector: '#sf1', offset: 400, callback: 'Materialize.showStaggeredList("#sf1")'}
 		];
+
 		Materialize.scrollFire(options);
+
+
+
+		$("#mail-button").click(function() {
+
+			var email = $("#email-value").val();
+
+			if (email == "") {
+				setSignUpMessage("Please enter an email in input field above", FAILURE);
+				return;
+			} else if ( email.indexOf("@") == -1 ) {
+				setSignUpMessage("Please enter a valid email (containing an '@' character)", FAILURE);
+				return;
+			} else if (email.indexOf(".") == -1) {
+				setSignUpMessage("Please enter an email containing a valid domain ('.com', '.org', etc...)", FAILURE);
+				return;
+			}
+
+			var MailingList = new Parse.Object.extend("MailingList");
+			var emailQuery = new Parse.Query(MailingList);
+
+			emailQuery.equalTo("email", email);
+			emailQuery.find({
+				success: function(results) {
+					var object = results[0];
+					if (object == null) {
+						saveNewEmail(email);
+					} else {
+						setSignUpMessage(email + " is already on the mailing list.", FAILURE);
+					}
+				},
+				error: function(error) {
+
+				}
+			});
+		});
+
+
+		function saveNewEmail(email) {
+
+			var MailingList = new Parse.Object.extend("MailingList");
+			var mailingEntry = new MailingList();
+			mailingEntry.set("email", email);
+
+			mailingEntry.save(null, {
+				success: function(mailingEntry) {
+					setSignUpMessage(email + " is now on the mailing list.", SUCCESS);
+				},
+				error: function(mailingEntry, error) {
+
+					var errorMessage = "";
+
+					switch (error.code) {
+						case -1: 
+							errorMessage = "Please enter a valid email address.";
+							break;
+						default:
+							errorMessage = "Something went terribly wrong (" + error.code + "). We were unable to sign you up. Please try again.";
+							break;
+					}
+
+					setSignUpMessage(errorMessage, FAILURE);
+				}
+			});
+		}
+
+		function setSignUpMessage(msg, success) {
+			if (success) {
+				$("#signup-received").css('color', 'green');
+			} else {
+				$("#signup-received").css('color', 'red');
+			}
+
+			$("#signup-received").text(msg);
+		}
+
+
 
 	</script>
 </body>
